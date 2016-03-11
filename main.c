@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-
+#include "myLib.h"
 
 int main(){
     int choice;
