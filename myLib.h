@@ -107,5 +107,22 @@ int getMaxSkew(char str[], int n){
 	}
 }
 
-
+int getMinSkew(char str[], int n){
+	int i;
+	int g = 0;
+	int c = 0;
+	if(n <= strlen(str)-1){
+		for(i = 0; i < n; i+=1){
+			if(str[i] == 'C'){
+				c+=1;
+			}else if(str[i] == 'G'){
+				if(g!=1)
+					g+=1;
+			}
+		}
+		return g-c;
+	}else{
+		return 0;
+	}
+}
 

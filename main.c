@@ -74,6 +74,13 @@ int main(){
                 printf("Max Skew: %d\n",getMaxSkew(str1, n));
                 break;
             case 6:
+                printf("Enter String: ");
+                scanf(" ");    
+                fgets(str1, sizeof(str1), stdin);                
+
+                printf("Enter N : ");
+                scanf("%d", &n);
+                printf("Min Skew: %d\n",getMinSkew(str1, n));
                 break;
             case 7:
                 break;
