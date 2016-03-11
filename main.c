@@ -24,10 +24,8 @@ int main(){
                 printf("Enter string 1: ");
                 scanf(" ");    
                 fgets(str1, sizeof(str1), stdin);
-                
-                
+                                
                 printf("Enter string 2: ");
-                scanf(" ");
                 fgets(str2, sizeof(str2), stdin);
 
                 getHammingDistance(str1,str2);
@@ -35,16 +33,22 @@ int main(){
             case 2:
                 printf("Enter Original string: ");
                 scanf(" ");    
-                fgets(str1, sizeof(str1), stdin);
-                
+                fgets(str1, sizeof(str1), stdin);                
 
                 printf("Enter Pattern string : ");
-                scanf(" ");
                 fgets(str2, sizeof(str2), stdin);
 
                 countSubstrPattern(str1, str2);
                 break;
             case 3:
+                printf("Enter String: ");
+                scanf(" ");    
+                fgets(str1, sizeof(str1), stdin);                
+
+                printf("Enter Alphabet : ");
+                fgets(str2, sizeof(str2), stdin);
+
+                isValidString(str1, str2);
                 break;
             case 4:
                 break;

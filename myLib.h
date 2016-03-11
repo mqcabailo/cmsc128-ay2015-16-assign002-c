@@ -8,7 +8,7 @@ int getHammingDistance(char str1[], char str2[]){
 
 	//checks if the strings are of same length
 	if(strlen(str1) == strlen(str2)){
-		for(i = 0; i<strlen(str1); i+=1){
+		for(i = 0; i<strlen(str1)-1; i+=1){
 			if(str1[i] != str2[i]){
 				count+=1;
 			}
@@ -42,8 +42,31 @@ int countSubstrPattern(char original[], char pattern[]){
 			}
 			check = 0;
 		}
-		return count;
-	}else{
-		return 0;
+		
 	}
+
+	return count;
+}
+
+int isValidString(char str[], char alphabet[]){
+	int i;
+	int j;
+	int valid = 1;
+
+	for(i = 0; i < strlen(str)-1;i+=1){
+		for(j = 0; j < strlen(alphabet)-1;j+=1){
+			if(str[i]==alphabet[j]){
+				break;
+			}else if(str[i]!=alphabet[j] && j==strlen(alphabet)-2 ){
+				valid = 0;
+			}
+		}
+
+		if(valid == 0){
+			break;
+		}
+	}
+
+	return valid;
+
 }
