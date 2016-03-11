@@ -5,6 +5,7 @@
 
 int main(){
     int choice;
+    int n;
     char str1[50];
     char str2[50];
     do{
@@ -51,6 +52,13 @@ int main(){
                 isValidString(str1, str2);
                 break;
             case 4:
+                printf("Enter String: ");
+                scanf(" ");    
+                fgets(str1, sizeof(str1), stdin);                
+
+                printf("Enter N : ");
+                scanf("%d", &n);
+                getSkew(str1, n);
                 break;
             case 5:
                 break;
