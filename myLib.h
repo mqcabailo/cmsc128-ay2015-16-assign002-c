@@ -88,3 +88,24 @@ int getSkew(char str[], int n){
 		return 0;
 	}
 }
+
+int getMaxSkew(char str[], int n){
+	int i;
+	int g = 0;
+	int c = 0;
+	if(n <= strlen(str)-1){
+		for(i = 0; i < n; i+=1){
+			if(str[i] == 'C'){
+				c+=1;
+			}else if(str[i] == 'G'){
+				g+=1;
+			}
+		}
+		return g;
+	}else{
+		return 0;
+	}
+}
+
+
+

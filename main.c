@@ -29,7 +29,7 @@ int main(){
                 printf("Enter string 2: ");
                 fgets(str2, sizeof(str2), stdin);
 
-                getHammingDistance(str1,str2);
+                printf("Hamming distance: %d\n", getHammingDistance(str1,str2));
                 break;
             case 2:
                 printf("Enter Original string: ");
@@ -39,7 +39,7 @@ int main(){
                 printf("Enter Pattern string : ");
                 fgets(str2, sizeof(str2), stdin);
 
-                countSubstrPattern(str1, str2);
+                printf("Substring patterns: %d\n", countSubstrPattern(str1, str2));
                 break;
             case 3:
                 printf("Enter String: ");
@@ -49,7 +49,11 @@ int main(){
                 printf("Enter Alphabet : ");
                 fgets(str2, sizeof(str2), stdin);
 
-                isValidString(str1, str2);
+                if(isValidString(str1, str2) == 1){
+                    printf("String is Valid\n");
+                }else{
+                    printf("String is not Valid\n");
+                }
                 break;
             case 4:
                 printf("Enter String: ");
@@ -58,9 +62,16 @@ int main(){
 
                 printf("Enter N : ");
                 scanf("%d", &n);
-                getSkew(str1, n);
+                printf("Skew: %d\n",getSkew(str1, n));
                 break;
             case 5:
+                printf("Enter String: ");
+                scanf(" ");    
+                fgets(str1, sizeof(str1), stdin);                
+
+                printf("Enter N : ");
+                scanf("%d", &n);
+                printf("Max Skew: %d\n",getMaxSkew(str1, n));
                 break;
             case 6:
                 break;
